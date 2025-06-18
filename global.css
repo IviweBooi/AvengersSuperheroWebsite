@@ -1,0 +1,39 @@
+/* === Imports === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset box-sizing for all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Base styles for body */
+body {
+    background-color: var(--base-color);
+    margin: 0;
+    padding: 0;
+    min-width: 375px;
+}
+
+
+:root {
+    /* Background Colors */
+    --base-color: rgba(0, 0, 0, 1);            /* Main background */
+    --base-variant: rgba(22, 27, 34, 1);       /* Variant background */
+
+    /* Text Colors */
+    --heading-color: rgba(255, 255, 255, 1);    /* White for headings */
+    --text-color: rgba(240, 246, 252, 1);       /* Light text on dark background */
+
+    /* Accent Colors */
+    --primary-color: rgba(226, 54, 54, 1);      /* Red for important elements */
+    --secondary-color: rgba(0, 64, 128, 1);     /* Blue for navigation */
+    --accent-color: rgba(245, 197, 24, 1);      /* Gold for highlights */
+
+    /* Font Family */
+    --inter: 'Inter', sans-serif;
+
+    /* font Size */
+    --normal: 14px;
+    --medium: 15px;
+
+}

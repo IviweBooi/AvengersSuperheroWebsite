@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home page</title>
+    <link rel="stylesheet" type="text/css" href="global.css"/>
+    <link rel="stylesheet" type="text/css" href="navbar.css"/>
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/f88cd4a022.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div id="left-div">
+            <div id="logo-div"></div>
+            <h1>Avengers</h1>
+        </div>
+        <div id="middle-div">
+            <ul>
+                <li class="menu-link"><a id="home" href="#" style="color: tomato;">Home</a></li>
+                <li class="menu-link"><a id="characters" href="#">Characters</a></li>
+                <li class="menu-link"><a id="about" href="#">About</a></li>
+                <li class="menu-link"><a id="movies" href="#">Movies</a></li>
+                <li class="menu-link"><a id="news" href="#">News</a></li>
+                <li class="menu-link" style="margin-right: 0;"><a id="Books" href="#">Books</a></li>
+            </ul>
+        </div>
+        <div id="right-div">
+            <button class="btn" id="login-btn" type="button">Login</button>
+            <button class="btn" id="signUp-btn" type="button">Sign up</button>
+            <button type="button" onclick="viewSideBar()" id="hamburger-menu" >
+                <img id="menu-icon" src="images/hamburger-icon.png" height="25">
+                <img id="x-icon" src="images/x.png" height="25">
+            </button>
+        </div>
+    </nav>
+    <div id="side-bar">
+        <ul>
+            <li class="menu-link"><a id="side-home" href="#" style="color: tomato;">Home</a></li>
+            <li class="menu-link"><a id="side-characters" href="#">Characters</a></li>
+            <li class="menu-link"><a id="side-about" href="#">About</a></li>
+            <li class="menu-link"><a id="side-movies" href="#">Movies</a></li>
+            <li class="menu-link"><a id="side-news" href="#">News</a></li>
+            <li class="menu-link" style="margin-right: 0;"><a id="side-Books" href="#">Books</a></li>
+        </ul>
+    </div>
+    <script src="navbar.js"/>
+</body>
+</html>

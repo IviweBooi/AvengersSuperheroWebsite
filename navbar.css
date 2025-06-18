@@ -1,0 +1,263 @@
+/* === Navigation Styles === */
+nav{
+    background: linear-gradient(to right, rgba(0,0,0,0.7),rgba(226, 54, 54, 0.4) ,rgba(0,0,0,0.7));
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    z-index: 999;
+    padding: 0 20px;
+    backdrop-filter: blur(10px);
+    transition: all ease-in-out 0.3s;
+}
+
+/* === Left Section === */
+#left-div{
+    background-color: transparent;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+}
+
+#left-div #logo-div{
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    position: relative;
+    background-image: url("images/Avengers-logo3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#left-div h1{
+    font-family: var(--inter);
+    color: var(--primary-color);
+}
+
+/* === Middle Section === */
+#middle-div{
+    background-color: transparent;
+    flex: 50%; /* occupy 50% of the available space */
+    margin: 0 40px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#middle-div ul{
+    background-color: rgba(50,50,50,0.1);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    list-style: none;
+    padding: var(--medium) 20px;
+    border: none;
+    border-radius: 20px;
+    backdrop-filter: blur(50px);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+#middle-div ul li{
+    background-color: transparent;
+    position: relative;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+}
+#middle-div ul li::after{
+    content: '';
+    position: absolute;
+    top: 30px;
+    height: 15%;
+    width: 0;
+    right: 50%;
+    transform: translateX(50%); /* centering the element */
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,1);
+    transform-origin: center;
+    transition: all ease-in-out 0.2s;
+}
+
+#middle-div ul li:hover::after{
+    width: 110%;
+}
+
+#middle-div ul li a{
+    text-decoration: none;
+    font-family:var(--inter);
+    font-size: var(--normal);
+    color: rgba(255,255,255,0.7);
+    transition: all linear 0.3s;
+}
+#middle-div ul li a:hover,active{
+    color: var(--text-color);
+}
+/* === Right Section === */
+#right-div{
+    background-color: transparent;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    align-items: center;
+}
+
+
+#right-div .btn{
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+#right-div .btn:hover{
+    transform: scale(1.1);
+}
+#right-div #login-btn{
+    background-color: transparent;
+    font-family: var(--inter);
+    font-size: var(--medium);
+    border: none;
+    border-radius: 20px;
+    color: rgba(255,255,255,0.5);
+}
+#right-div #login-btn:hover,active{
+    color: #ffffff;
+}
+#right-div #signUp-btn{
+    font-family: var(--inter);
+    font-size: var(--medium);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    min-width: 95px;
+}
+#hamburger-menu{
+    background-color: transparent;
+    height: 25px;
+    width: 25px;
+    margin-left: 15px;
+    border: none;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+
+}
+#hamburger-menu:hover{
+    transform: scale(1.2);
+}
+
+#hamburger-menu img{
+    object-fit: contain;
+    transform: scale(-1)
+}
+#menu-icon{
+    display: flex;
+}
+#x-icon{
+    display: none;
+}
+
+/* === Sidebar Styles === */
+#side-bar{
+    background: linear-gradient(to right, rgba(0,0,0,0.7),rgba(226, 54, 54, 0.4) ,rgba(0,0,0,0.7));
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 61px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: start
+    z-index: 998;
+    padding: 20px 0px;
+    backdrop-filter: blur(10px);
+    transition: all ease-in-out 0.3s;
+}
+
+#side-bar ul{
+    background-color: transparent;
+    padding: 0 20px;
+    list-style: none;
+}
+#side-bar ul li{
+    width: fit-content;
+    background-color: transparent;
+    margin-bottom: 20px;
+    cursor: pointer
+    position: relative;
+}
+#side-bar ul li a::after{
+    content: '';
+    width: 0%;
+    height: 10%;
+    transition-origin: left;
+    background-color: white;
+    position: absolute;
+    bottom: -10px;;
+    left: 0;
+    border: none;
+    border-radius: 20px;
+    transition: all ease-in-out 0.1s;
+}
+#side-bar ul li a:hover::after{
+    width: 100%;
+}
+
+#side-bar ul li a{
+    font-family: var(--inter);
+    text-decoration: none;
+    text-size: var(--normal);
+    color: rgba(255,255,255,0.7);
+    transition: all linear 0.3s;
+    position: relative;
+}
+
+#side-bar ul li a:hover,active{
+    color: white;
+}
+
+
+
+
+
+@media screen and (max-width: 870px){
+    #middle-div ul{display: none;}
+    #hamburger-menu{display:flex;}
+}
+
+
+
+
+
