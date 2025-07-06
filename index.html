@@ -8,6 +8,7 @@
     <title>Home page</title>
     <link rel="stylesheet" type="text/css" href="global.css"/>
     <link rel="stylesheet" type="text/css" href="navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="content.css"/>
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/f88cd4a022.js" crossorigin="anonymous"></script>
 </head>
@@ -19,8 +20,7 @@
         </div>
         <div id="middle-div">
             <ul>
-                <li class="menu-link"><a id="home" href="#" style="color: tomato;">Home</a></li>
-                <li class="menu-link"><a id="characters" href="#">Characters</a></li>
+                <li class="menu-link"><a id="home" href="#" style="color: tomato;font-weight: 400;font-size: 18px;">Home</a></li>
                 <li class="menu-link"><a id="about" href="#">About</a></li>
                 <li class="menu-link"><a id="movies" href="#">Movies</a></li>
                 <li class="menu-link"><a id="news" href="#">News</a></li>
@@ -31,21 +31,61 @@
             <button class="btn" id="login-btn" type="button">Login</button>
             <button class="btn" id="signUp-btn" type="button">Sign up</button>
             <button type="button" onclick="viewSideBar()" id="hamburger-menu" >
-                <img id="menu-icon" src="images/hamburger-icon.png" height="25">
-                <img id="x-icon" src="images/x.png" height="25">
+                <img id="menu-icon" src="images/menu-bars.svg" height="30">
+                <img id="x-icon" src="images/cross-icon.svg" height="15">
             </button>
         </div>
     </nav>
-    <div id="side-bar">
+    <div id="side-bar" >
         <ul>
             <li class="menu-link"><a id="side-home" href="#" style="color: tomato;">Home</a></li>
-            <li class="menu-link"><a id="side-characters" href="#">Characters</a></li>
             <li class="menu-link"><a id="side-about" href="#">About</a></li>
             <li class="menu-link"><a id="side-movies" href="#">Movies</a></li>
             <li class="menu-link"><a id="side-news" href="#">News</a></li>
             <li class="menu-link" style="margin-right: 0;"><a id="side-Books" href="#">Books</a></li>
         </ul>
     </div>
+    <header class="header">
+        <div class="characters-header">Iron-man</div>
+        <div class="characters-header">Captain America</div>
+        <div class="characters-header">Hulk</div>
+        <div class="characters-header">Black Widow</div>
+        <div class="characters-header">Thor</div>
+
+    </header>
+    <!-- landing page -->
+
+    <section id="landing-page">
+        <div id="content">
+            <img src="images/avengers-logo2.png" height="100" style="margin-bottom: 40px;filter: drop-shadow(5px 5px 5px var(--primary-color)">
+            <h1><span>Avengers. United.</span></h1>
+            <h1>The future of earth's mightiest.</h1>
+            <p>Join the legendary heroes in their quest to protect humanity and save the universe.</p>
+            <div id="buttons-box">
+                <button id="join-btn">Join the Team <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></button>
+                <button id="learn-btn">Learn more</button>
+            </div>
+        </div>
+        <div class="bottom-box">
+            <div class="description">
+               <h1>6</h1>
+               <p>Original Members</p>
+            </div>
+            <div class="description">
+               <h1>30+</h1>
+               <p>Movies released</p>
+            </div>
+            <div class="description">
+               <h1><i class="fa-solid fa-infinity"></i></h1>
+               <p>worlds Saved</p>
+            </div>
+            <div class="description">
+               <h1>2008</h1>
+               <p>Since</p>
+            </div>
+        </div>
+
+    </section>
     <script src="navbar.js"/>
 </body>
 </html>

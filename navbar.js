@@ -6,6 +6,7 @@ function viewSideBar(){
     const xIcon = document.querySelector('#x-icon');
     if (sideBar.style.display == 'none'){
         sideBar.style.display = 'flex';
+        sideBar.style.zIndex = '999';
         menuIcon.style.display = 'none';
         xIcon.style.display = 'flex';
     }else{
