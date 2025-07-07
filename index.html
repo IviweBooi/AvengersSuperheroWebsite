@@ -11,6 +11,9 @@
     <link rel="stylesheet" type="text/css" href="content.css"/>
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/f88cd4a022.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="api-data.js"></script>
+
 </head>
 <body>
     <nav>
@@ -51,13 +54,15 @@
         <div class="characters-header">Hulk</div>
         <div class="characters-header">Black Widow</div>
         <div class="characters-header">Thor</div>
+        <div class="characters-header">Vision</div>
+        <div class="characters-header">Black Panther</div>
 
     </header>
     <!-- landing page -->
 
     <section id="landing-page">
         <div id="content">
-            <img src="images/avengers-logo2.png" height="100" style="margin-bottom: 40px;filter: drop-shadow(5px 5px 5px var(--primary-color)">
+            <img src="images/avengers-logo2.png" height="100" style="margin-bottom: 40px;filter: drop-shadow(5px 5px 5px var(--primary-color));">
             <h1><span>Avengers. United.</span></h1>
             <h1>The future of earth's mightiest.</h1>
             <p>Join the legendary heroes in their quest to protect humanity and save the universe.</p>
@@ -86,6 +91,101 @@
         </div>
 
     </section>
-    <script src="navbar.js"/>
+
+    <section id="characters-page">
+        <h1 class="section-h1">Earth's Mightiest Heroes</h1>
+        <p class="section-p">Meet the legendary team of superheroes who have saved the world countless times</p>
+        <div id="character-cards">
+            <div class="card-div" style="background-image: url('images/iron-man.jpg');">
+                <div class="card-info">
+                    <h1>Iron Man</h1>
+                    <p>A genius billionaire playboy philanthropist.</p>
+                    <button>View Profile <i class="fa-solid fa-chevron-right" style="margin-left: 5px;transform: scale(0.9);"></i></button>
+                </div>
+            </div>
+
+            <div class="card-div" style="background-image: url('images/captain-america1.jpeg');">
+                <div class="card-info">
+                    <h1>Captain America</h1>
+                    <p>The first Avenger, fighting for justice and freedom.</p>
+                    <button>View Profile <i class="fa-solid fa-chevron-right" style="margin-left: 5px;transform: scale(0.9);"></i></button>
+                </div>
+            </div>
+
+            <div class="card-div" style="background-image: url('images/thor.jpg');">
+                <div class="card-info">
+                    <h1>Thor</h1>
+                    <p>The God of Thunder, wielding Mjolnir.</p>
+                    <button>View Profile <i class="fa-solid fa-chevron-right" style="margin-left: 5px;transform: scale(0.9);"></i></button>
+                </div>
+            </div>
+
+            <div class="card-div" style="background-image: url('images/hulk2.jpg');">
+                <div class="card-info">
+                    <h1>The Hulk</h1>
+                    <p>Strongest Avenger, driven by rage.</p>
+                    <button>View Profile <i class="fa-solid fa-chevron-right" style="margin-left: 5px;transform: scale(0.9);"></i></button>
+                </div>
+            </div>
+
+            <div class="card-div" style="background-image: url('images/black-widow.jpg');">
+                <div class="card-info">
+                    <h1>Black Widow</h1>
+                    <p>A master spy and skilled fighter.</p>
+                    <button>View Profile <i class="fa-solid fa-chevron-right" style="margin-left: 5px;transform: scale(0.9);"></i></button>
+                </div>
+            </div>
+
+            <div class="card-div" style="background-image: url('images/vision.jpg');">
+                <div class="card-info">
+                    <h1>Vision</h1>
+                    <p>A synthezoid with a strong sense of morality.</p>
+                    <button>View Profile <i class="fa-solid fa-chevron-right" style="margin-left: 5px;transform: scale(0.9);"></i></button>
+                </div>
+            </div>
+
+            <div class="card-div" style="background-image: url('images/black-panther.jpg');">
+                <div class="card-info">
+                    <h1>Black Panther</h1>
+                    <p>The king of Wakanda, protector of his people.</p>
+                    <button>View Profile <i class="fa-solid fa-chevron-right" style="margin-left: 5px;transform: scale(0.9);"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="comics-page">
+        <h1>Marvel Cinematic Universe</h1>
+        <p>Experience the epic journey of the Avengers across multiple phases</p>
+        <div id="movies-section">
+
+        </div>
+    </section>
+    <script src="navbar.js"></script>
+
+    <script>
+
+        const url = `https://superheroapi.com/api.php/${accessToken}/${characterId}`;
+
+        fetch(url)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+          })
+          .then(data => console.log(data))
+          .catch(error => console.error('There was a problem with the fetch operation:', error));
+
+        const url2 = `http://gateway.marvel.com/v1/public/comics?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+
+        fetch(url2)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+          })
+          .then(data => console.log(data))
+    </script>
 </body>
 </html>

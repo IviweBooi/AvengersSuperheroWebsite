@@ -15,7 +15,7 @@ nav{
     align-items: stretch;
     z-index: 999;
     padding: 0 20px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     transition: all ease-in-out 0.3s;
     border-bottom: 0.1px solid rgba(255,255,255,0.6);
 }
@@ -75,7 +75,7 @@ nav{
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(5px);
     box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
@@ -261,14 +261,14 @@ nav{
     height: 40px;
     width: 100%;
     position: fixed;
-    top: 60px;
+    top: 59px;
     left: 0;
     right: 0;
     border-bottom: 0.1px solid rgba(255,255,255,0.6);
-    backdrop-filter: blur(10px);
-    z-index: 999;
+    backdrop-filter: blur(20px);
+    z-index: 998;
     display: flex;
-    fle-wrap: nowrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -313,8 +313,9 @@ nav{
     #right-div #signUp-btn{
         min-width: 80px
     }
-    .characters-header{
-        left: 14px;
+    .header{
+        justify-content: start;
+
     }
 
 }
